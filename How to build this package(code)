@@ -1,0 +1,7 @@
+How to setup this repo
+1)read and complete the instruction 
+2)must install eigen3 from repo
+3)comment ioctl in rt_serial.hpp #34 
+4)comment /home/ruben/Cyberdog_Locomition/cyberdog_locomotion/control/third_party/qpOASES/include/qpOASES/UnitTesting.hpp  # //END_NAMESPACE_QPOASES  # //BEGIN_NAMESPACE_QPOASES
+5)rewrite in cpp_types.hpp #include <eigen3/Eigen/Dense>
+6)update path eigen in VSCode
