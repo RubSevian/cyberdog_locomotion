@@ -31,7 +31,7 @@ void InitSerialForSbus( int fd, int baud ) {
     printf( "\t[RT SERIAL] Configuring serial device...\n" );
     struct termios2 tty;
 
-    ioctl( fd, TCGETS2, &tty );
+    //ioctl( fd, TCGETS2, &tty ); didnt know what doing this code 
     tty.c_cflag &= ~CBAUD;
     tty.c_cflag |= BOTHER;
     tty.c_ispeed = baud;
@@ -65,7 +65,7 @@ void InitSerialForSbus( int fd, int baud ) {
     // tty.c_cflag &= ~CRTSCTS;
     // cfmakeraw(&tty);
 
-    ioctl( fd, TCSETS2, &tty );
+   // ioctl( fd, TCSETS2, &tty ); //didnt know what doing this code 
 }
 
 /**
@@ -83,7 +83,7 @@ int SetInterfaceAttribsCustomBaud( int fd, int speed, int parity, int port ) {
     printf( "\t[RT SERIAL] Configuring serial device...\n" );
     struct termios2 tty;
 
-    ioctl( fd, TCGETS2, &tty );
+   // ioctl( fd, TCGETS2, &tty );//didnt know what doing this code 
     tty.c_cflag &= ~CBAUD;
     tty.c_cflag |= BOTHER;
     tty.c_ispeed = speed;
@@ -109,7 +109,7 @@ int SetInterfaceAttribsCustomBaud( int fd, int speed, int parity, int port ) {
     tty.c_cflag &= ~CRTSCTS;
     // cfmakeraw(&tty);
 
-    ioctl( fd, TCSETS2, &tty );
+    //ioctl( fd, TCSETS2, &tty );//didnt know what doing this code 
     return 0;
 }
 

@@ -9,7 +9,7 @@
 
 #include <vector>
 
-#include <Eigen/Dense>
+#include <eigen3/Eigen/Dense>
 
 #include "c_types.h"
 
